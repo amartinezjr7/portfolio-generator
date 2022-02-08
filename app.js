@@ -16,12 +16,28 @@ fs.writeFile('index.html',pageHTML, err =>{
          {
              type: 'input',
              name: 'name',
-             message: 'What is your name?'
+             message: 'What is your name? (Required)',
+             validate: nameInput =>{
+                 if (nameInput) {
+                     return true;
+                 }else {
+                     console.log('Please enter your name!');
+                     return false;
+                 }
+             }
          },
          {
              type: 'input',
              name: 'github',
-             message: 'Enter your Github Username'
+             message: 'Enter your Github Username (Required)',
+             validate:githubUsername =>{
+                 if(githubUsername) {
+                     return true;
+                 }else{
+                     console.log('Please enter your Github username');
+                     return false;
+                 }
+             }
          },
          {
              type: 'input',
@@ -44,12 +60,28 @@ fs.writeFile('index.html',pageHTML, err =>{
          {
              type:'input',
              name:'name',
-             message:'What is the name of your project?'
+             message:'What is the name of your project? (Required)',
+             validate:projectName=>{
+                 if(projectName){
+                     return true;
+                 }else{
+                     console.log('Please enter your project name');
+                     return false;
+                 }
+             }
          },
          {
              type:'input',
              name:'description',
-             message:'Provide a description of the project (Required)'
+             message:'Provide a description of the project (Required)',
+             validate:projectDescription =>{
+                 if(projectDescription){
+                     return true;
+                 }else{
+                     console.log('Please provide a description of your project');
+                     return false;
+                 }
+             }
          },
          {
              type:'checkbox',
@@ -60,7 +92,15 @@ fs.writeFile('index.html',pageHTML, err =>{
          {
              type:'input',
              name:'link',
-             message:'Enter the GitHub link to your project. (Required)'
+             message:'Enter the GitHub link to your project. (Required)',
+             validate:projectGithubLink =>{
+                 if(projectGithubLink){
+                     return true;
+                 }else{
+                     console.log('Please enter your github project link');
+                     return false;
+                 }
+             }
         },
         {
             type:'confirm',
