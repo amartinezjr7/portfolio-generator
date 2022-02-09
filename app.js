@@ -44,7 +44,7 @@ const generatePage = require('./src/page-template.js');
              message: 'Provide some information about yourself:',
              when:({confirmAbout})=> confirmAbout
                 
-             }
+             
          }
     ]);
  };
