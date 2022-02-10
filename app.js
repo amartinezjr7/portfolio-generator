@@ -132,11 +132,12 @@ const generatePage = require('./src/page-template.js');
     .then(portfolioData => {
         console.log(portfolioData);
         
-        /*const pageHTML = generatePage(name,github);
+        const pageHTML = generatePage(portfolioData);
+
         fs.writeFile('index.html',pageHTML, err =>{
         if(err) throw new Error (err) ;
 
-        console.log('Portfolio complete Check out index.html to see the output!');
-        });*/
+        console.log('Page created! Check out index.html in thie directory to see it!');
+        });
     });
     
