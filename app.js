@@ -1,20 +1,19 @@
 const profileDataArgs = process.argv.slice(2, process.argv.length);
-//console.log(profileDataArgs);
+
+console.log(profileDataArgs);
 
 const printProfileData = profileDataArr => {
-
-    //This...
-    for(let i = 0; i< profileDataArgs.length; i++){
+    for(let i = 1; i < profileDataArr.length; i++){
        console.log(profileDataArr[i]); 
     }
 
-    console.log('================');
+    console.log('================')
 
-    //Is the same as this...
-
-    profileDataArr.forEach(profileItem => console.log(profileItem));
-
+    //this is the same as the for loop
+    profileDataArr.forEach(profileItem => {
+        console.log(profileItem);
+        
+    });
     
 };
-
 printProfileData(profileDataArgs);
