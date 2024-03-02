@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/amartinezjr7/portfolio-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.6"
   }
 }
